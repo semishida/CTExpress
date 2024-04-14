@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/app.js" defer></script>
+	<script src="libs/rain.js" defer></script>
+</head>
+<body>
+
+	<div class="logo" style="background-image: url(img/logow.png);"></div>
+
+	<section class="layers"> 
+		<div class="layers__container">
+			<div class="layers__item layer-1" style="background-image: url(img/phon.png);"></div>
+			<div class="layers__item layer-2" style="background-image: url(img/derevya.png);"></div>
+			<div class="layers__item layer-3" >
+				<div class="hero-content">
+					<h1>China Town Express</h1>
+					<div class="hero-content__p">Создать - Доставить - Получить</div>
+					<form id="orderForm" action="/" method="post"> <!-- Изменено -->
+    					<button type="submit" class="button-start" formaction="/order">Оформить заказ</button> <!-- Изменено -->
+					</form>
+
+
+				</div>
+			</div>
+			<div class="layers__item layer-4"></div>
+			<canvas class="rain"></canvas>
+			<div class="layers__item layer-5" style="background-image: url(img/listi.png);"></div>
+			<div class="layers__item layer-6" style="background-image: url(img/dim.png);"></div>	
+			<div class="bu"></div>
+		</div>
+	</section>
+
+</body>
+</html>
