@@ -28,8 +28,8 @@ func main() {
 	log.Printf("Authorized on account %s", bot.Self.UserName)
 
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("HTML/html/css"))))
-	http.Handle("/newcss/", http.StripPrefix("/newcss/", http.FileServer(http.Dir("D:/golang/Todo/2/HTML/order/newcss"))))
-	http.Handle("/confirmation/", http.StripPrefix("/confirmation/", http.FileServer(http.Dir("D:/golang/Todo/2/HTML/order/confirmation.html"))))
+	http.Handle("/newcss/", http.StripPrefix("/newcss/", http.FileServer(http.Dir("HTML/order/newcss"))))
+	http.Handle("/confirmation/", http.StripPrefix("/confirmation/", http.FileServer(http.Dir("HTML/order/confirmation.html"))))
 	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("HTML/html/js"))))
 	http.Handle("/fonts/", http.StripPrefix("/fonts/", http.FileServer(http.Dir("HTML/html/fonts"))))
 	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("HTML/html/img"))))
@@ -56,7 +56,7 @@ func submit(w http.ResponseWriter, r *http.Request) {
 	zakaz := r.FormValue("zakaz")
 	adres := r.FormValue("adres")
 
-	db, err := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/china")
+	db, err := sql.Open("mysql", "root:@tcp(database:3306)/china")
 	if err != nil {
 		panic(err)
 	}
@@ -80,7 +80,6 @@ func submit(w http.ResponseWriter, r *http.Request) {
 	// Перенаправляем пользователя на страницу confirmation.html
 	http.Redirect(w, r, "/confirmation.html", http.StatusSeeOther)
 }
-
 func confirmationHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "HTML/order/confirmation.html")
 }
