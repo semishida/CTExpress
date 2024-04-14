@@ -12,25 +12,28 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: url("../2img/chinaorder.png");
+	background: url("../2img/success.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
-.wrapper{
-	width: 420px;
-	background: transparent;
-	border: 2px solid rgb(255, 255, 255, .2);
-	backdrop-filter: blur(15px);
-	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-	color: #fff;
-	border-radius: 10px;
-	padding: 30px 40px;
+.wrapper {
+    width: 50%; /* Используем 80% от ширины экрана */
+    max-width: 550px; /* Устанавливаем максимальную ширину, чтобы окно не становилось слишком широким на больших экранах */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
 }
 
-.wrapper h1{
-	font-size: 36px;
-	text-align: center;
+
+.wrapper h1 {
+    font-size: 24px; /* Уменьшаем размер шрифта для заголовка */
+    text-align: center;
+    margin-bottom: 20px; /* Увеличиваем расстояние между заголовком и текстом */
 }
 
 .wrapper .input-box{
@@ -38,6 +41,7 @@ body{
 	height: 50px;
 	margin: 30px 0;
 	position: relative;
+	font-family: "Poppins", sans-serif;
 }
 
 .input-box input{
@@ -48,7 +52,7 @@ body{
 	outline: none;
 	border: 5px solid rgb(255, 255, 255, .2);
 	border-radius: 40px;
-	font-size: 16px;
+	font-size: 14px;
 	color: #fff;
 	padding: 20px 45px 20px 20px;
 }
@@ -59,32 +63,17 @@ body{
 
 .input-box i{
 	position: absolute;
-	right: 20px;
+	right: 50px;
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 20px;
+	font-family: "Poppins", sans-serif;
+
+
 }
 
-.wrapper .remember{
-	display: flex;
-	justify-content: space-between;
-	font-size: 14.5px;
-	margin: -15px 0 15px;
-}
 
-.remember label input{
-	accent-color: #fff;
-	margin-right: 3px;
-}
 
-.remember a{
-	color: #fff;
-	text-decoration: none;
-}
-
-.remember a:hover{
-	text-decoration: underline;
-}
 
 .wrapper .btn{
 	width: 100%;
@@ -98,21 +87,4 @@ body{
 	font-size: 16px;
 	color: #333;
 	font-weight: 600;
-}
-
-.wrapper .register-link{
-	font-size: 14.5px;
-	text-align: center;
-	margin-top: 20px;
-}
-
-.register-link p a{
-	color: #444;
-	text-decoration: none;
-	font-weight: 600;
-}
-
-.register-link p a:hover{
-	text-decoration: underline;
-	color: #fff;
 }
